@@ -8,12 +8,16 @@ import { Dish } from '../shared/dish';
 })
 export class MenuComponent implements OnInit {
 
+  dishes: Dish[] = DISHES;
+  selectedDish: Dish = DISHES[0];
+
   constructor() { }
 
   ngOnInit() {
   }
+}
 
-  dishes: Dish[] = [
+  const DISHES: Dish[] = [
     {
       id: '0',
       name: 'Uthappizza',
@@ -24,6 +28,8 @@ export class MenuComponent implements OnInit {
       price: '4.99',
       // tslint:disable-next-line:max-line-length
       description: 'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'
+
+
     },
     {
       id: '1',
@@ -57,4 +63,4 @@ export class MenuComponent implements OnInit {
     }
   ];
 
-}
+
